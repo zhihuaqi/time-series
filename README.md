@@ -80,7 +80,7 @@
   max:       18.32
   ```
 
-  ![gold_est_decomposition](/Users/qizhihua/src/time-series/images/gold_est_decomposition.png)
+  ![gold_est_decomposition](images/gold_est_decomposition.png)
 
 ### Step 3
 
@@ -154,8 +154,8 @@ MA.1           -1.1133           +0.0000j            1.1133            0.5000
 
 - I futher did ACF-plot to check the autocorrelation on gold's and silver's diffenece. These two plots were saved in folder output/.
 
-   ![silver_acf](/Users/qizhihua/src/time-series/images/silver_acf.png)
+   ![silver_acf](images/silver_acf.png)
 
-  ![gold_acf](/Users/qizhihua/src/time-series/images/gold_acf.png)
+  ![gold_acf](images/gold_acf.png)
 
 - The best model for silver price is ARIMA (0, 1, 0), so the best model for silver price direction of change will be ARIMA (0, 0, 0). These represent random walk model and white noise model respectively. And the ACF plot can confirm this result. For gold price, the best model is ARIMA (1, 1, 1), so the best model for gold price direction of change will be ARMA (1,1). But this choice is based on AIC, as we can see from the step-wise detail, ARIMA (0,1,0) has the lowest BIC and the difference between AIC is quite small. Combined with the ACF plot, past prices are not useful in predicting future prices or direction of change. Applying random walk and white noise model to data suggests that commodity prices and direction change randomly, and it is not possible to beat or predict the market because prices reflect all available information and the occurrence of new information is seemingly random as well.
